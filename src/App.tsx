@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
 import './App.css';
+import {penguinSlice} from "./store/reducers/penguinSlice";
+import {useAppDispatch, useAppSelector} from "./hooks/redux";
+import {fetchUsers} from "./store/reducers/ActionCreators";
+import PenguinContainer from "./components/PenguinContainer";
+import Navbar from "./components/UI/Navbar";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import To_Do from "./components/To_Do";
 
 function App() {
-  return (
+    const dispatch = useAppDispatch();
+    const {penguins,isLoading,error} = useAppSelector(state => state.penguin);
+    useEffect(() => {
+        dispatch(fetchUsers());
+    }, []);
+
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <BrowserRouter>
+            <Navbar/>
+            <Routes>
+                <Route path="/*" element={<PenguinContainer/>}/>
+                <Route path="/To_Do/:id" element={<To_Do/>}/>
+                <Route path="/To_Do/*" element={<To_Do/>}/>
+            </Routes>
+        </BrowserRouter>
+
+     </div>
+    );
 }
 
 export default App;
