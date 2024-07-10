@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Sahashirokov/penguin.github.io%3Crepo-name/static/css/main.d7225609.css",
-    "main.js": "/Sahashirokov/penguin.github.io%3Crepo-name/static/js/main.a0e2694f.js",
-    "index.html": "/Sahashirokov/penguin.github.io%3Crepo-name/index.html",
-    "main.d7225609.css.map": "/Sahashirokov/penguin.github.io%3Crepo-name/static/css/main.d7225609.css.map",
-    "main.a0e2694f.js.map": "/Sahashirokov/penguin.github.io%3Crepo-name/static/js/main.a0e2694f.js.map"
+    "main.css": "/Sahashirokov/penguin.github.io/static/css/main.d7225609.css",
+    "main.js": "/Sahashirokov/penguin.github.io/static/js/main.cf9d2097.js",
+    "index.html": "/Sahashirokov/penguin.github.io/index.html",
+    "main.d7225609.css.map": "/Sahashirokov/penguin.github.io/static/css/main.d7225609.css.map",
+    "main.cf9d2097.js.map": "/Sahashirokov/penguin.github.io/static/js/main.cf9d2097.js.map"
   },
   "entrypoints": [
     "static/css/main.d7225609.css",
-    "static/js/main.a0e2694f.js"
+    "static/js/main.cf9d2097.js"
   ]
 }
